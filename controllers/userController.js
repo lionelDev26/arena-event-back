@@ -48,10 +48,10 @@ exports.deleteUser = (req, res) => {
 };
 
 exports.checkConnection = (req, res) => {
-    const userName = req.body.userName;
+    const username = req.body.username;
     const password = req.body.password;
 
-  const user = userService.checkLoginAndPassword(userName,password);
+  const user = userService.checkLoginAndPassword(username,password);
 
   if (user) {
     res.json(user);
